@@ -142,9 +142,10 @@
         $.post(URL,data);
     });
 
-    var source = editor.getValue();
+
     console.log(l);
     $("#send_gist").click(function(){
+        var source = editor.getValue();
         $.ajax({
             url: 'https://api.github.com/gists',
             type: 'POST',
