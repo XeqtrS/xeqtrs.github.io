@@ -149,7 +149,7 @@
         $.ajax({
             url: 'https://api.github.com/gists',
             type: 'POST',
-            data: '{"description": "Gist on Flock","public": false,"files": {"file1."'+l+': {"content":"'+source+'"}}}'
+            data: '{"description": "Gist on Flock","public": false,"files": {"file1.'+l+'": {"content":"'+source+'"}}}'
         }).done(function(response) {
             console.log(response);
         });
