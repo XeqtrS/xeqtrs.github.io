@@ -162,7 +162,7 @@
         var URL = "https://api.github.com/gists";
         var source = editor.getValue();
 
-        data = {
+        var data = {
 
               "description": "the description for this gist",
               "public": false,
@@ -171,6 +171,7 @@
                   "content": source
                 }
               }
+              JSON.stringify(data);
 
 
             /*client_secret: CLIENT_SECRET,
