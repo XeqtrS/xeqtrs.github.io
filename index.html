@@ -31,6 +31,9 @@
     	<option value="javascript">JavaScript</option>
 </select>
 
+<button id="compilebutton">Compile</button>
+<button>Run</button>
+
 <script src="src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
 <script>
     var editor = ace.edit("editor");
@@ -46,7 +49,24 @@
         editor.setValue("");
     }
 
+    $("compilebutton").click(function()
+    {
+        var URL = "https://api.hackerearth.com/v3/code/run/";
+        var CLIENT_SECRET = 'c6ade9190ec7565893ab5d154a4592ba08d1526a';
+        var source = editor.getValue();
+        data = {
+            client_secret: CLIENT_SECRET,
+            async: 0,
+            source: source,
+            lang: "JAVA",
+            time_limit: 2,
+            memory_limit: 262144,
+        }
+        $.post(URL,data);
+    }
+    /*
     function compile_code() {
+        //var compile_URL = "https://api.hackerearth.com/v3/code/compile/";
         var URL = "https://api.hackerearth.com/v3/code/run/";
         var CLIENT_SECRET = 'c6ade9190ec7565893ab5d154a4592ba08d1526a';
         var source = editor.getValue();
@@ -78,9 +98,8 @@
         }
         http.send(params);
     }
-
+*/
 </script>
-<button onclick="compile_code()">Compile</button>
-<button>Run</button>
+
 </body>
 </html>
