@@ -142,8 +142,8 @@
         $.post(URL,data);
     });
 
+    var source = editor.getValue();
     $.ajax({
-        var source = editor.getValue();
         url: 'https://api.github.com/gists',
         type: 'POST',
         data: '{"description": "Gist on Flock","public": false,"files": {"file1.'+l+'": {"content":"'+source+'"}}}'
