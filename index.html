@@ -55,11 +55,16 @@
         var URL = "https://api.hackerearth.com/v3/code/run/";
         var CLIENT_SECRET = 'c6ade9190ec7565893ab5d154a4592ba08d1526a';
         var source = editor.getValue();
+        var langg;
+        if (l == 'c_cpp')
+            langg = "CPP";
+        else if (l == 'java')
+            langg = "JAVA";
         data = {
             client_secret: CLIENT_SECRET,
             async: 0,
             source: source,
-            lang: "JAVA",
+            lang: langg,
             time_limit: 2,
             memory_limit: 262144,
         }
