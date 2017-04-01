@@ -144,7 +144,7 @@
 
     var source = editor.getValue();
 
-    $("send_gist").click(function(){
+    $("#send_gist").click(function(){
         $.ajax({
             url: 'https://api.github.com/gists',
             type: 'POST',
