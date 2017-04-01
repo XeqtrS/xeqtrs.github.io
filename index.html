@@ -46,13 +46,13 @@
     }
 
     function compile_code() {
-        var url = "https://api.hackerearth.com/v3/code/run/";
+        var URL = "https://api.hackerearth.com/v3/code/run/";
         var CLIENT_SECRET = 'c6ade9190ec7565893ab5d154a4592ba08d1526a';
         var source = editor.getValue();
 
         var http = new XMLHttpRequest();
         var params = "client_secret="+CLIENT_SECRET+"&async=0&source="+source+"&lang=CPP11&time_limit = 2&memory_limit=262144";
-        http.open("POST", url, true);
+        http.open("POST", URL, true);
 
         //Send the proper header information along with the request
         http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
