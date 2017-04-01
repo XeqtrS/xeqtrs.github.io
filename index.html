@@ -49,7 +49,7 @@
     function compile_code() {
         var URL = "https://api.hackerearth.com/v3/code/run/";
         var CLIENT_SECRET = 'c6ade9190ec7565893ab5d154a4592ba08d1526a';
-        var source = new String(editor.getValue());
+        var source = editor.getValue();
 
         console.log(source);
         var http = new XMLHttpRequest();
@@ -65,7 +65,7 @@
         console.log(l);
         console.log(hearth_lang);
 
-        var params = "client_secret="+CLIENT_SECRET+"&async=0&source="+source+"&lang="+ hearth_lang +"&time_limit = 2&memory_limit=262144";
+        var params = "client_secret="+CLIENT_SECRET+"&async=0&source=" + source + "&lang="+ hearth_lang +"&time_limit = 2&memory_limit=262144";
         http.open("POST", URL, true);
 
         //Send the proper header information along with the request
