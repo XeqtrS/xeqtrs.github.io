@@ -45,6 +45,7 @@
     function func(){
         var x = document.getElementById("lang");
         l = x.options[x.selectedIndex].value;
+        console.log(x.selectedIndex);
         console.log(l);
         editor.session.setMode("ace/mode/" + l);
         editor.setValue("");
