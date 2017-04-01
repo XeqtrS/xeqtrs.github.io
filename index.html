@@ -53,7 +53,16 @@
         console.log(source);
 
         var http = new XMLHttpRequest();
-        var params = "client_secret="+CLIENT_SECRET+"&async=0&source="+source+"&lang="+l+"&time_limit = 2&memory_limit=262144";
+        var hearth_lang;
+        if (l=='c_cpp')
+        {
+            hearth_lang = 'CPP11';
+        }
+        else if (l == 'java')
+        {
+            hearth_lang = 'JAVA';
+        }
+        var params = "client_secret="+CLIENT_SECRET+"&async=0&source="+source+"&lang="+ hearth_lang +"&time_limit = 2&memory_limit=262144";
         http.open("POST", URL, true);
 
         //Send the proper header information along with the request
