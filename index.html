@@ -81,7 +81,7 @@
 
     <button id="compilebutton" class="btn btn-primary">Compile</button>
     <button class="btn btn-primary">Run</button>
-    <button class="btn btn-primary">Send</button>
+    <button id="send_gist" class="btn btn-primary">Send</button>
   </div>
     <div class="col-sm-1"></div>
     </div>
@@ -143,14 +143,16 @@
     });
 
     var source = editor.getValue();
-    $.ajax({
-        url: 'https://api.github.com/gists',
-        type: 'POST',
-        data: '{"description": "Gist on Flock","public": false,"files": {"file1.'+l+'": {"content":"'+source+'"}}}'
-    }).done(function(response) {
-        console.log(response);
-    });
 
+    $("send_gist").click(function(){
+        $.ajax({
+            url: 'https://api.github.com/gists',
+            type: 'POST',
+            data: '{"description": "Gist on Flock","public": false,"files": {"file1.'+l+'": {"content":"'+source+'"}}}'
+        }).done(function(response) {
+            console.log(response);
+        });
+    });
 
 </script>
 
