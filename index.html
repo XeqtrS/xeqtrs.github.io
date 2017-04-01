@@ -51,7 +51,7 @@
         var source = editor.getValue();
 
         var http = new XMLHttpRequest();
-        var params = "client_secret="+CLIENT_SECRET+"&async=0&source="+source+"&lang=CPP11&time_limit = 2&memory_limit=262144";
+        var params = "client_secret="+CLIENT_SECRET+"&async=0&source="+source+"&lang="+l+"&time_limit = 2&memory_limit=262144";
         http.open("POST", URL, true);
 
         //Send the proper header information along with the request
@@ -63,8 +63,6 @@
             }
         }
         http.send(params);
-
-
     }
 
 </script>
