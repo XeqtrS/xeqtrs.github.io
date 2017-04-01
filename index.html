@@ -74,41 +74,7 @@
         }
         $.post(URL,data);
     });
-    /*
-    function compile_code() {
-        //var compile_URL = "https://api.hackerearth.com/v3/code/compile/";
-        var URL = "https://api.hackerearth.com/v3/code/run/";
-        var CLIENT_SECRET = 'c6ade9190ec7565893ab5d154a4592ba08d1526a';
-        var source = editor.getValue();
-        console.log(l);
-        console.log(source);
-        var http = new XMLHttpRequest();
-        var hearth_lang;
-        if (l=='c_cpp')
-        {
-            hearth_lang = 'CPP';
-        }
-        else if (l == 'java')
-        {
-            hearth_lang = 'JAVA';
-        }
-        console.log(l);
-        console.log(hearth_lang);
 
-        var params = "client_secret="+CLIENT_SECRET+"&async=0&source=" + source + "&lang="+ hearth_lang +"&time_limit = 2&memory_limit=262144";
-        http.open("POST", URL, true);
-
-        //Send the proper header information along with the request
-        http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-
-        http.onreadystatechange = function() {//Call a function when the state changes.
-            if(http.readyState == 4 && http.status == 200) {
-                alert(http.responseText);
-            }
-        }
-        http.send(params);
-    }
-*/
 </script>
 
 </body>
