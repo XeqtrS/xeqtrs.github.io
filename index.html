@@ -39,7 +39,7 @@
 
     function func(){
         var x = document.getElementById("lang");
-        var l = x.options[x.selectedIndex].value;
+        l = x.options[x.selectedIndex].value;
         console.log(l);
         editor.session.setMode("ace/mode/" + l);
         editor.setValue("");
