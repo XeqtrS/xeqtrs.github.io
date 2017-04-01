@@ -49,7 +49,7 @@
     function compile_code() {
         var URL = "https://api.hackerearth.com/v3/code/run/";
         var CLIENT_SECRET = 'c6ade9190ec7565893ab5d154a4592ba08d1526a';
-        var source = "'"+editor.getValue()+"'";
+        var source = new String(editor.getValue());
 
         console.log(source);
         var http = new XMLHttpRequest();
