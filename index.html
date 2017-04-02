@@ -114,6 +114,7 @@
     editor.session.setMode("ace/mode/c_cpp");
     editor.setTheme("ace/theme/twilight");
     var l = 'c_cpp';
+    var gist_link;
 
     function func(){
         var x = document.getElementById("sel1");
@@ -179,7 +180,7 @@
 
         function funcx(datarecieved){
             //console.log(datarecieved.html_url);
-            var gist_link = datarecieved.html_url;
+             gist_link = datarecieved.html_url;
 
             url_for_user = 'https://api.flock.co/v1/users.getInfo';
             xyz = {token:'74f2d4a1-bbc6-4bd6-9ea1-16f3c07609a1'};
@@ -194,7 +195,8 @@
                 xhr.open("POST",post_url,true);
                 xhr.setRequestHeader('Content-Type','application/json');
                 xhr.send(JSON.stringify({
-                    text : "hello world"
+                    text : gist_link
+
                 }));
                 /*
                 payload = JSON.stringify(payload);
