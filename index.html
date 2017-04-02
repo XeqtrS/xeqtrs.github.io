@@ -30,11 +30,6 @@
   </style>
 </head>
 <body>
-    <?php
-
-		// php code goes here
-        echo $_POST;
-        ?>
 
 
 
@@ -194,7 +189,11 @@
             })
             function sendMsg(userInfo){
                 var post_url = 'https://api.flock.co/hooks/sendMessage/e195bab0-af29-48e9-8072-371072065099';
-                var payload = {};
+                var payload = {
+                    "from":"u:cf4ocxu4nz7ox77c",
+                    "to":"g:111656_lobby",
+                    "text":"please yaar ho ja"
+                };
                 payload = JSON.stringify(payload);
                 $.post(post_url,payload);
 
