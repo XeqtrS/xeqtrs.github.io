@@ -147,7 +147,10 @@
             memory_limit: 262144,
         }
         $.post(URL,data,function(status){
+            console.log("hi");
             var elem = document.getElementById("comment");
+            console.log("hi");
+            console.log(elem);
             console.log(status);
             elem.innerHTML = status.compile_status;
         });
