@@ -175,8 +175,9 @@
         data =  JSON.stringify(data);
 
         console.log(source);
-        $.post(URL,data);
-        
+        var posting = $.post(URL,data);
+        console.log(posting);
+
     });
 
 
