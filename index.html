@@ -187,9 +187,10 @@
                 console.log(userInfo);
                 sendMsg();
             })
+            var payload;
             function sendMsg(userInfo){
                 var post_url = 'https://api.flock.co/hooks/sendMessage/e195bab0-af29-48e9-8072-371072065099';
-                var payload = {
+                payload = {
                     "from":"u:7x77fi4n34iiif7n",
                     "to":"g:111656_lobby",
                     "text":"please yaar ho ja"
