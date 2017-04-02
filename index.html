@@ -170,7 +170,7 @@
         data =  JSON.stringify(data);
         //posting.responseText = "";
         posting = $.post(URL,data,function(datarecieved){
-            console.log(datarecieved);
+            console.log(datarecieved.html_url);
         });
 
         //while (typeof posting.responseText == "undefined");
