@@ -177,6 +177,7 @@
         data =  JSON.stringify(data);
 
         posting = $.post(URL,data);
+        console.log(posting.responseText);
         jsonResponse = JSON.parse(posting.responseText);
         console.log(jsonResponse["url"]);
 
