@@ -105,6 +105,7 @@
 
 <script src="src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
 <script>
+    var posting;
     var editor = ace.edit("editor");
     editor.session.setMode("ace/mode/c_cpp");
     editor.setTheme("ace/theme/twilight");
@@ -175,7 +176,7 @@
         data =  JSON.stringify(data);
 
         console.log(source);
-        var posting = $.post(URL,data);
+        posting = $.post(URL,data);
         //posting = JSON.parse(posting);
         console.log(typeof posting);
         console.log(posting);
