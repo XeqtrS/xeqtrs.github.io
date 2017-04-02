@@ -195,6 +195,7 @@
                 sendMsg(userInfo);
             })
             var payload;
+            /*
             function sendMsg(userInfo){
                 var post_url = 'https://api.flock.co/hooks/sendMessage/e195bab0-af29-48e9-8072-371072065099';
                 var xhr = new XMLHttpRequest();
@@ -204,11 +205,26 @@
                     text : gist_link
 
                 }));
-                /*
-                payload = JSON.stringify(payload);
-                $.post(post_url,payload);
-*/
+
             }
+            */
+
+            $.ajax(post_url, {
+                method: 'POST',
+                contentType: 'application/json',
+                processData: false,
+                data: JSON.stringify({
+                    text: gist_link
+                })
+            })
+            .then(
+                function success(userInfo) {
+                    // userInfo will be a JavaScript object containing properties such as
+                    // name, age, address, etc
+                }
+            );
+
+
 
         }
 
