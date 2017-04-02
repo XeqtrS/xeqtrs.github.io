@@ -182,14 +182,19 @@
             xyz = {token:'74f2d4a1-bbc6-4bd6-9ea1-16f3c07609a1'};
             $.post(url_for_user,xyz,function(userInfo){
                 console.log(userInfo);
+                sendMsg();
             })
+            function sendMsg(userInfo){
+                var post_url = 'https://api.flock.co/hooks/sendMessage/e195bab0-af29-48e9-8072-371072065099';
+                var payload = {
+                    //"from":userInfo.id,
+                    //"to":
+                    "text":"this is fuckin' flockathon"
+                };
+            //    payload = JSON.stringify(payload);
+                $.post(post_url,payload);
 
-            var post_url = 'https://api.flock.co/hooks/sendMessage/e195bab0-af29-48e9-8072-371072065099';
-            var payload = {
-                "text":"this is fuckin' flockathon"
-            };
-            payload = JSON.stringify(payload);
-            $.post(post_url,payload);
+            }
 
         }
 
