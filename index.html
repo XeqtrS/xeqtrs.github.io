@@ -190,26 +190,16 @@
             var payload;
             function sendMsg(userInfo){
                 var post_url = 'https://api.flock.co/hooks/sendMessage/e195bab0-af29-48e9-8072-371072065099';
-                payload = {
-    "from": userInfo.id,
-    console.log("ji");
-    "to": "g:cf4ocxu4nz7ox77c",
-    "id": "bfbf7700",
-    "uid": "1454595241007-6QpQpe-mh104",
-    "text": "A rich text message",
-    "timestamp": 1481808450532,
-    "attachments": [{
-        "title": "A title",
-        "description": "A little longer description",
-        "views": {
-            "widget": { "src": "<widget url>", "width": 400, "height": 400 },
-            "flockml": "<flockml>some content</flockml>"
-        }
-    }]
-};
+                var xhr = new XMLHttpRequest();
+                xhr.open("POST",post_url,true);
+                xhr.setRequestHeader('Content-Type','application/json');
+                xhr.send(JSON.stringify({
+                    text : "hello world"
+                }));
+                /*
                 payload = JSON.stringify(payload);
                 $.post(post_url,payload);
-
+*/
             }
 
         }
