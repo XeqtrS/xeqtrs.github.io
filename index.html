@@ -21,10 +21,10 @@
     }
 
     #editor {
-        height:300px;
+        height:290px;
     }
     .input_area{
-        height: 25px;
+        height: 20px;
     }
 
   </style>
@@ -94,8 +94,8 @@
         <div class="col-sm-1"></div>
         <div class="col-sm-10">
             <div class="form-group">
-              <label for="comment">Input:</label>
-              <textarea class="form-control input_area" rows="5" id="comment"></textarea>
+              <label for="comment">Status:</label>
+              <textarea  class="form-control input_area" rows="5" id="comment"></textarea>
             </div>
         <div class="col-sm-1"></div>
 
@@ -146,7 +146,11 @@
             time_limit: 2,
             memory_limit: 262144,
         }
-        $.post(URL,data);
+        $.post(URL,data,function(status){
+            var elem = document.getElementById("comment");
+            console.log(status);
+            elem.innerHTML = status.compile_status;
+        });
     });
 
 
