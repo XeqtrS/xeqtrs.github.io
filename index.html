@@ -185,7 +185,7 @@
             xyz = {token:'74f2d4a1-bbc6-4bd6-9ea1-16f3c07609a1'};
             $.post(url_for_user,xyz,function(userInfo){
                 console.log(userInfo);
-                sendMsg();
+                sendMsg(userInfo);
             })
             var payload;
             function sendMsg(userInfo){
