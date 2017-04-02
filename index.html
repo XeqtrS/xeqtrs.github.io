@@ -145,13 +145,13 @@
             time_limit: 2,
             memory_limit: 262144,
         }
-        $.post(URL,data,function(status){
+        $.post(URL,data,function(status1){
             console.log("hi");
             var elem = document.getElementById("comment");
             console.log("hi");
             console.log(elem);
-            console.log(status);
-            elem.innerHTML = status.compile_status;
+            console.log(status1);
+            elem.innerHTML = status1.compile_status;
         });
     });
 
