@@ -174,12 +174,38 @@
                 }
             }
         };
+
+        /*
+        $(function()
+        {
+                $.post("test_post.php",
+                {
+                        name: "John Doe",
+                        age: "42"
+                },
+                function(data, textStatus)
+                {
+                        alert("Response from server: " + data);
+                });
+        });
+        */
+
         data =  JSON.stringify(data);
 
-        posting = $.post(URL,data);
+        $.post(URL,
+        data
+        function(data, textStatus)
+        {
+                alert("Response from server: " + data);
+        });
+
+
+
+
+        /*posting = $.post(URL,data);
         console.log(posting.responseText);
         jsonResponse = JSON.parse(posting.responseText);
-        console.log(jsonResponse["url"]);
+        console.log(jsonResponse["url"]);*/
 
     });
 
