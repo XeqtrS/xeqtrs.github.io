@@ -171,10 +171,15 @@
 
         posting = $.post(URL,data,function(datarecieved){
             console.log(datarecieved.html_url);
+
+            funcx(datarecieved);
         });
 
-        console.log("hello");
-        console.log(datarecieved.html_url);
+        function funcx(datarecieved){
+            console.log(datarecieved.html_url);
+        }
+
+
 
 
     });
