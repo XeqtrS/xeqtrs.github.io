@@ -179,7 +179,7 @@
 
         data =  JSON.stringify(data);
 
-        /*
+        
         posting = $.post(URL,data,function(datarecieved){
             //console.log(datarecieved.html_url);
             funcx(datarecieved);
@@ -210,12 +210,24 @@
             }
 
 
-
+            /*$.ajax(post_url, {
+                method: 'POST',
+                contentType: 'application/json',
+                processData: false,
+                data: JSON.stringify({
+                    text: gist_link
+                })
+            })
+            .then(
+                function success(userInfo) {
+                    // userInfo will be a JavaScript object containing properties such as
+                    // name, age, address, etc
+                }
+            );*/
 
 
 
         }
-        */
 
 
 
