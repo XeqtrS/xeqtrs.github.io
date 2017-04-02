@@ -169,10 +169,8 @@
 
         data =  JSON.stringify(data);
         posting = $.post(URL,data);
-
-        while (posting.responseText == 'undefined');
-
-
+        
+        while (typeof posting.responseText == "undefined");
         console.log(posting.responseText);
         jsonResponse = JSON.parse(posting.responseText);
         console.log(jsonResponse["url"]);
