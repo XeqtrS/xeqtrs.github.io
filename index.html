@@ -176,7 +176,7 @@
 
         console.log(source);
         var posting = $.post(URL,data);
-        posting = $.getJSON(posting);
+        posting = JSON.parse(posting);
         console.log(posting);
 
     });
